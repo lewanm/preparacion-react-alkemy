@@ -1,0 +1,9 @@
+:root {
+  --primary-color: #a8dadc;
+  --primary-text-color: white;
+  --dark-color: rgb(24, 24, 24);
+  --background-color: rgb(20, 20, 20);
+  --success-btn: #b1e3a0;
+  --success-btn-border: rgba(105, 158, 87, 9);
+  --error-btn: #e63946;
+}
