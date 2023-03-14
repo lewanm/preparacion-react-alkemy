@@ -7,12 +7,13 @@ import DetalleCard from "./DetailCard";
 export default function Detalle() {
   const [movieDetail, setMovieDetail] = useState(null);
   const [idError, setIdError] = useState(false);
+  const apiKey = "2f8dad5c5e53ddd1a9371700f28b07db";
 
   let token = localStorage.getItem("token");
   let query = new URLSearchParams(window.location.search);
   let movieID = query.get("movieID");
   useEffect(() => {
-    let endpoint = `https://api.themoviedb.org/3/movie/${movieID}?api_key=${process.env.REACT_APP_KEY}&language=es-ES`;
+    let endpoint = `https://api.themoviedb.org/3/movie/${movieID}?api_key=${apiKey}&language=es-ES`;
 
     axios
       .get(endpoint)

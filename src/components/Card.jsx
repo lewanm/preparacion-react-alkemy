@@ -5,15 +5,7 @@ import { useNavigate } from "react-router-dom";
 //HABRIA QUE CREAR LA CARD CON TODA LA INFORMACION OCULTA Y DESPUES MOSTRARLA CON EL HOVER
 
 export default function Card({ movieData }) {
-  const {
-    title,
-    id,
-    popularity,
-    release_date,
-    vote_average,
-    poster_path,
-    overview,
-  } = movieData;
+  const { title, id, poster_path, overview } = movieData;
 
   const navigate = useNavigate();
   const ref = useRef(null);

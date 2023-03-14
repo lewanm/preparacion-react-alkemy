@@ -11,7 +11,7 @@ export default function Footer() {
             </li>
           </ul>
         </nav>
-        <p>Copyright Alkemy Challenge</p>
+        <p>No hay nada de copyright</p>
       </footer>
     </>
   );

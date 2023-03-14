@@ -10,7 +10,7 @@ import "../css/header.css";
 import Search from "./Search";
 
 //helpers
-import isLoggedIn from "../helpers/isLoggedIn";
+//import isLoggedIn from "../helpers/isLoggedIn";
 
 export default function Header() {
   const [menuActivation, setMenuActivation] = useState(false);

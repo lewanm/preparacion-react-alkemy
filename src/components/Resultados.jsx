@@ -9,11 +9,12 @@ import "../css/listado.css";
 
 export default function Resultados() {
   const [movies, setMovies] = useState([]);
+  const apiKey = "2f8dad5c5e53ddd1a9371700f28b07db";
   let query = new URLSearchParams(window.location.search);
   let keyword = query.get("keyword");
 
   useEffect(() => {
-    const endpoint = `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_KEY}&language=es-ES&query=${keyword}`;
+    const endpoint = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=es-ES&query=${keyword}`;
 
     axios
       .get(endpoint)
