@@ -69,7 +69,9 @@ export default function Login() {
             <span>Contraseña:</span>
             <input type="password" name="password" />
           </label>
-          <button type="submit">Ingresar</button>
+          <button className="login-button" type="submit">
+            Ingresar
+          </button>
         </form>
       </div>
     </>

@@ -30,6 +30,10 @@ export default function Card({ movieData }) {
     return fraseFinal;
   }
 
+  const changeUrl = () => {
+    navigate(`/detalle?movieID=${id}`);
+  };
+
   //TODO dejar mas lindo esto que es horrible y repite codigo
   //Y VER SI SE PUEDE HACER DE OTRA FORMA CON LOS HOOKS
   useEffect(() => {
@@ -49,17 +53,24 @@ export default function Card({ movieData }) {
   }, []);
   return (
     <div className="card-container">
-      <div
-        onClick={() => navigate(`/detalle?movieID=${id}`)}
-        ref={ref}
-        className="card"
-      >
-        <img
-          className="card-img"
-          src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-          alt="placeholder"
-        />
+      <div onClick={changeUrl} ref={ref} className="card">
+        {poster_path ? (
+          <img
+            className="card-img"
+            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+            alt={title}
+          />
+        ) : (
+          <img className="card-img" src="/placeholderMovie.jpg" alt={title} />
+        )}
+
         <div className="data-container hidden">
+          <button
+            onClick={console.log("le diske a like")}
+            className="like-button"
+          >
+            🧡
+          </button>
           <p className="title hidden">{title}</p>
           {/* <p>{`${overview.substring(0, 60)}...`}</p> */}
           <p className="overview hidden">{`${prueba(overview, 25)} ...`}</p>

@@ -19,7 +19,7 @@ form input {
   padding-left: 0.5rem;
 }
 
-form button {
+.form-input {
   margin-top: 1rem;
   line-height: 1.5rem;
   color: var(--primary-text-color);
